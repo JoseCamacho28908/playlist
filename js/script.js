@@ -1,16 +1,79 @@
 /* global $ */
 
 // BELOW Update the songs array with four of your favorites songs.
-var songs = [];
-// BELOW Add 4 More arrays to store images_links, artists, song lengths, and links for each song
-// Make sure they match the same order as your array above
+var songs = [
+    "Break",
+    "Esto Esta Rico",
+    "Frontline",
+    "In The End",
+];
 
 
+var artist=[
+    "Three Days Grace",
+    "Bad Bunny",
+    "Pillar",
+    "Linkin Park",
+];
+
+
+
+var images_links=[
+    "https://upload.wikimedia.org/wikipedia/en/4/41/Three_days_grace_break.png",
+    "https://i.scdn.co/image/d858eb4c9d939d4a9a2f70cd573d0426ea21a342",
+    "https://i.ytimg.com/vi/r6WVb6rXnkE/hqdefault.jpg",
+    "https://www.grammy.com/sites/com/files/styles/image_landscape_hero/public/linkinpark-hero-156670900.jpg?itok=o5e35W6u",
+    
+];
+
+
+
+var links=[
+    "https://www.youtube.com/watch?v=_4VCpTZye10",
+    "https://www.youtube.com/watch?v=--BHuKeveg4",
+    "https://www.youtube.com/watch?v=jTEkfsGnRTA",
+    "https://www.youtube.com/watch?v=eVTXPUF4Oz4",
+
+];
+
+
+var song_length=[
+    212,
+    281,
+    192,
+    217,
+];
 
 function displaySongInfo(){
     // BELOW Use forEach Loop to display the data from each of your arrays in the correct div
 
+songs.forEach(function(song){
+    $("#songs").append("<p>"+ song + "</p>");
+});
+
+
+artist.forEach(function(artists){
+    $("#artists").append("<p>" + artists +"</p>" );
+});
+
+
+images_links.forEach(function(image){
+    $("#images").append("<img src='"+ image + "'> </img>");
+});
+
+
+links.forEach(function(link){
+    $("#links").append("<a href='" + link + "'>Watch Youtube Video! </a>");
+});
+
+
+song_length.forEach(function(length){
+    $("#lengths").append("<p>" + length + "</p>");
+});
+
+
 }
+
 
 function emptySongInfo(){
     $("#songs").empty();
