@@ -76,7 +76,11 @@ song_length.forEach(function(length){
 
 
 function emptySongInfo(){
+    $("#images").empty();
     $("#songs").empty();
+    $("#artists").empty();
+    $("#lengths").empty();
+    $("#links").empty();
     // Use jQuery to empty all of the remaining divs
 
 
@@ -85,14 +89,26 @@ function emptySongInfo(){
 
 function addSongInfo(){
     // BELOW write the code to add new items to each of the arrays.
+$("#add").click(function(){
+    var newSong= $("#song").val();
+    var songLength2= $("#length").val();
+    var songLink= $("#link").val();
+    var newArtist= $("#artist").val();
+    var newImage= $("#image").val();
+    
+    songs.push(newSong);
+    song_length.push(songLength2);
+    links.push(songLink);
+    artist.push(newArtist);
+    images_links.push(newImage);
+    
+
+    emptySongInfo();
+    displaySongInfo();
+    
+});
 
 
 }
-
-$("#add").click(function() {
-    emptySongInfo();
-    addSongInfo();
-    displaySongInfo();
-});
-
+addSongInfo();
 displaySongInfo();
