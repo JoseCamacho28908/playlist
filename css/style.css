@@ -60,7 +60,15 @@ input {
     font-size: 14px;
 }
 
-button {
+button:hover {
+    border-radius: 12px;
     font-size: 14px;
     padding: 5px 10px;
+    background-color: #35F3F3;
+    color: black;
+}
+
+
+#main {
+    background-color: #35F3F3;
 }

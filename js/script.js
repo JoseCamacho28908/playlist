@@ -9,7 +9,7 @@ var songs = [
 ];
 
 
-var artist=[
+var artist = [
     "Three Days Grace",
     "Bad Bunny",
     "Pillar",
@@ -17,65 +17,62 @@ var artist=[
 ];
 
 
-
-var images_links=[
+var images_links = [
     "https://upload.wikimedia.org/wikipedia/en/4/41/Three_days_grace_break.png",
     "https://i.scdn.co/image/d858eb4c9d939d4a9a2f70cd573d0426ea21a342",
     "https://i.ytimg.com/vi/r6WVb6rXnkE/hqdefault.jpg",
     "https://www.grammy.com/sites/com/files/styles/image_landscape_hero/public/linkinpark-hero-156670900.jpg?itok=o5e35W6u",
-    
 ];
 
 
 
-var links=[
+var links = [
     "https://www.youtube.com/watch?v=_4VCpTZye10",
     "https://www.youtube.com/watch?v=--BHuKeveg4",
     "https://www.youtube.com/watch?v=jTEkfsGnRTA",
     "https://www.youtube.com/watch?v=eVTXPUF4Oz4",
-
 ];
 
 
-var song_length=[
+var song_length = [
     212,
     281,
     192,
     217,
 ];
 
-function displaySongInfo(){
+function displaySongInfo() {
     // BELOW Use forEach Loop to display the data from each of your arrays in the correct div
 
-songs.forEach(function(song){
-    $("#songs").append("<p>"+ song + "</p>");
-});
+    songs.forEach(function(song) {
+        $("#songs").append("<p>" + song + "</p>");
+    });
 
 
-artist.forEach(function(artists){
-    $("#artists").append("<p>" + artists +"</p>" );
-});
+    artist.forEach(function(artists) {
+        $("#artists").append("<p>" + artists + "</p>");
+    });
 
 
-images_links.forEach(function(image){
-    $("#images").append("<img src='"+ image + "'> </img>");
-});
+    images_links.forEach(function(image) {
+        $("#images").append("<img src='" + image + "'> </img>");
+    });
 
 
-links.forEach(function(link){
-    $("#links").append("<a href='" + link + "'>Watch Youtube Video! </a>");
-});
+    links.forEach(function(link) {
+        $("#links").append("<a href='" + link + "'>Watch Youtube Video! </a>");
+    });
 
 
-song_length.forEach(function(length){
-    $("#lengths").append("<p>" + length + "</p>");
-});
+    song_length.forEach(function(length) {
+        $("#lengths").append("<p>" + length + "</p>");
+    });
 
 
 }
 
 
-function emptySongInfo(){
+function emptySongInfo() {
     $("#images").empty();
     $("#songs").empty();
     $("#artists").empty();
@@ -87,26 +84,26 @@ function emptySongInfo(){
 }
 
 
-function addSongInfo(){
+function addSongInfo() {
     // BELOW write the code to add new items to each of the arrays.
-$("#add").click(function(){
-    var newSong= $("#song").val();
-    var songLength2= $("#length").val();
-    var songLink= $("#link").val();
-    var newArtist= $("#artist").val();
-    var newImage= $("#image").val();
-    
-    songs.push(newSong);
-    song_length.push(songLength2);
-    links.push(songLink);
-    artist.push(newArtist);
-    images_links.push(newImage);
-    
+    $("#add").click(function() {
+        var newSong = $("#song").val();
+        var songLength2 = $("#length").val();
+        var songLink = $("#link").val();
+        var newArtist = $("#artist").val();
+        var newImage = $("#image").val();
 
-    emptySongInfo();
-    displaySongInfo();
-    
-});
+        songs.push(newSong);
+        song_length.push(songLength2);
+        links.push(songLink);
+        artist.push(newArtist);
+        images_links.push(newImage);
+
+
+        emptySongInfo();
+        displaySongInfo();
+
+    });
 
 
 }
